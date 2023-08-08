@@ -6,15 +6,23 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
                         http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean class="com.springlearn.Student" name="student1x">
-        <property name="studentId">
-            <value>23</value>
-        </property>
-        <property name="studentName">
-            <value>Sumit Kumar</value>
-        </property>
-        <property name="studentAddress">
-            <value>Ranchi</value>
-        </property>
+    <bean class="com.springlearn.Student" name="student1">
+        <property name="studentId" value="21" />
+
+        <property name="studentName" value="Sumit Kumar" />
+
+        <property name="studentAddress" value="Ranchi, Jharkhand" />
     </bean>
+
+    <bean class="com.springlearn.Student" name="student2">
+        <property name="studentId" value="18" />
+
+        <property name="studentName" value="ABC Kr." />
+
+        <property name="studentAddress" value="Ranchi, Jharkhand" />
+    </bean>
+    <!-- Now p is removed -->
+    <!-- <bean class="com.springlearn.Student" name="student3" p:studentId="41" p:studentName="XYZ
+    Kr"
+        p:studentAddress="Ranchi, JH" /> -->
 </beans>
