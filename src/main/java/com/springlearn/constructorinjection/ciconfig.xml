@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://springframework.org/schema/context"
+    xmlns:p="http://springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean class="com.springlearn.constructorinjection.Certificate" name="certificateref">
+        <constructor-arg value="Java Certificate" />
+
+    </bean>
+    <bean class="com.springlearn.constructorinjection.Person" name="personci">
+        <constructor-arg value="222000" type="int" />
+        <constructor-arg value="Sumit" />
+        <constructor-arg ref="certificateref" />
+        <constructor-arg>
+            <list>
+                <value>Ranchi</value>
+                <value>Jharkhand</value>
+                <value>In</value>
+                <value>834009</value>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
