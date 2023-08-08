@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://springframework.org/schema/context"
+    xmlns:p="http://springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean class="com.springlearn.collections.Emp" name="emp1">
+        <property name="name" value="Sumit"></property>
+        <property name="phones">
+            <list>
+                <value>21</value>
+                <value>233</value>
+                <value>2334</value>
+                <value>232</value>
+                <value>21</value>
+                <null></null>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>Delhi</value>
+                <value>Bengaluru</value>
+                <value>Ranchi</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value="2 months"></entry>
+                <entry key="python" value="2.1 months"></entry>
+                <entry key="javascript" value="1 month"></entry>
+                <entry key="c++" value="6 months"></entry>
+            </map>
+        </property>
+        <property name="props">
+            <props>
+                <prop key="username">imsumit</prop>
+                <prop key="password">sumit100</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
