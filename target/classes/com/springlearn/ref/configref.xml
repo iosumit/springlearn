@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://springframework.org/schema/context"
+    xmlns:p="http://springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean name="bref" class="com.springlearn.ref.B">
+        <property name="y" value="77777" />
+    </bean>
+    <bean class="com.springlearn.ref.A" name="aref">
+        <property name="a" value="223" />
+
+        <property name="b" ref="bref" />
+        <!-- OR -->
+        <!-- <property name="b">
+            <ref bean="bref" />
+        </property> -->
+    </bean>
+</beans>
