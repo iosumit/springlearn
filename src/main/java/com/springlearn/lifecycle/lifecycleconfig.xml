@@ -12,4 +12,8 @@
         destroy-method="destroyed">
         <property name="price" value="222" />
     </bean>
+
+    <bean class="com.springlearn.lifecycle.Pepsi" name="pepsizero">
+        <property name="price" value="20" />
+    </bean>
 </beans>

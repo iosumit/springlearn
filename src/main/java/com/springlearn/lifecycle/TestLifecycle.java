@@ -9,11 +9,14 @@ public class TestLifecycle {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext(
                 "com/springlearn/lifecycle/lifecycleconfig.xml");
 
+        // Destroy Object in AbstractApplicationContext
+        context.registerShutdownHook();
+
         Samosa samosa = (Samosa) context.getBean("samosa1");
         System.out.println(samosa);
 
-        // Destroy Object in AbstractApplicationContext
-        context.registerShutdownHook();
+        Pepsi pepsi = (Pepsi) context.getBean("pepsizero");
+        System.out.println(pepsi);
     }
 
 }
