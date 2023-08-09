@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<beans
-    xmlns="http://www.springframework.org/schema/beans"
+<beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:context="http://springframework.org/schema/context"
-    xmlns:p="http://springframework.org/schema/p"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-                        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
+    <context:annotation-config />
     <bean class="com.springlearn.lifecycle.Samosa" name="samosa1" init-method="init"
         destroy-method="destroyed">
         <property name="price" value="222" />
@@ -15,5 +14,9 @@
 
     <bean class="com.springlearn.lifecycle.Pepsi" name="pepsizero">
         <property name="price" value="20" />
+    </bean>
+
+    <bean class="com.springlearn.lifecycle.Beer" name="beerlite">
+        <property name="price" value="120" />
     </bean>
 </beans>

@@ -17,6 +17,9 @@ public class TestLifecycle {
 
         Pepsi pepsi = (Pepsi) context.getBean("pepsizero");
         System.out.println(pepsi);
+
+        Beer beerlite = (Beer) context.getBean("beerlite");
+        System.out.println(beerlite);
     }
 
 }
