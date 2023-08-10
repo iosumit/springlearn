@@ -9,5 +9,9 @@ public class StereoTest {
 
         Student student = context.getBean("student", Student.class);
         System.out.println(student);
+
+        System.out.println(student.getVisited());
+        System.out.println(student.getVisited().getClass().getName());
+
     }
 }

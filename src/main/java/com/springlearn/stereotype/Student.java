@@ -1,5 +1,7 @@
 package com.springlearn.stereotype;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -9,6 +11,17 @@ public class Student {
     private String studentName;
     @Value("Ranchi")
     private String city;
+
+    @Value("#{temp}")
+    private List<String> visited;
+
+    public List<String> getVisited() {
+        return visited;
+    }
+
+    public void setVisited(List<String> visited) {
+        this.visited = visited;
+    }
 
     public String getStudentName() {
         return studentName;
