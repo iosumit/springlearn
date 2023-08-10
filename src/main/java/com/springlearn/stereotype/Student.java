@@ -17,6 +17,17 @@ public class Student {
     @Value("#{temp}")
     private List<String> visited;
 
+    @Value("#{2+3}")
+    private int marks;
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int marks) {
+        this.marks = marks;
+    }
+
     public List<String> getVisited() {
         return visited;
     }
