@@ -10,9 +10,13 @@
 
     <context:annotation-config />
 
-    <bean class="com.springlearn.autowiring.annotation.AddressAnno" name="addressAnno">
+    <bean class="com.springlearn.autowiring.annotation.AddressAnno" name="addressAnno1">
         <property name="street" value="Ranchi" />
         <property name="city" value="JH, IN" />
+    </bean>
+    <bean class="com.springlearn.autowiring.annotation.AddressAnno" name="addressAnno2">
+        <property name="street" value="Gaya" />
+        <property name="city" value="Bihar, IN" />
     </bean>
 
     <bean name="empanno1" class="com.springlearn.autowiring.annotation.EmpAnno" />
