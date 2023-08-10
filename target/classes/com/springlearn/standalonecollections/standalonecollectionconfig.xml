@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://wwww.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd"
+>
+
+    <!-- Standalone List -->
+    <util:list list-class="java.util.Vector" id="myFriends">
+        <value>Friend 1</value>
+        <value>Friend 2</value>
+        <value>Friend 3</value>
+        <value>Friend 4</value>
+    </util:list>
+    <util:map map-class="java.util.HashMap" id="myFees">
+        <entry key="Java Core" value="2000" />
+        <entry key="Spring" value="5000" />
+        <entry key="Python" value="3000" />
+    </util:map>
+
+    <util:properties id="emailConfig">
+        <prop key="email">hi@gmail.com</prop>
+        <prop key="password">1111-1111-1111</prop>
+    </util:properties>
+
+    <util:properties id="dbconfig">
+        <prop key="driver">com.mysql.jdbc.Driver</prop>
+        <prop key="username">USERNAME</prop>
+        <prop key="username">PWD</prop>
+        <prop key="url">mysql:jdbc://localhost:3306/database</prop>
+    </util:properties>
+
+    <bean class="com.springlearn.standalonecollections.Person" name="personobj">
+        <!-- <property name="friends">
+            <ref bean="myFriends" />
+        </property> -->
+        <property name="friends" ref="myFriends" />
+        <property name="fees" ref="myFees" />
+        <property name="props" ref="dbconfig" />
+    </bean>
+</beans>

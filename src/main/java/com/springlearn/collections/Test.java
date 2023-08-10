@@ -9,5 +9,6 @@ public class Test {
                 "com/springlearn/collections/collectionconfig.xml");
         Emp emp1 = (Emp) context.getBean("emp1");
         System.out.println(emp1.toString());
+        System.out.println(emp1.getPhones().getClass().getName());
     }
 }
