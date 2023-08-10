@@ -16,4 +16,11 @@
         <value>Ranchi</value>
         <value>Bihar</value>
     </util:list>
+
+
+    <!-- Scope -> singleton | prototype -->
+    <bean class="com.springlearn.stereotype.Teacher" name="teacherObj" scope="prototype">
+        <property name="name" value="Sumit" />
+    </bean>
+
 </beans>
