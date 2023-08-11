@@ -19,6 +19,17 @@ public class Demo {
     @Value("#{ new java.lang.String('Sumit Kumar') }")
     private String name;
 
+    @Value("true")
+    private boolean isActive;
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean isActive) {
+        this.isActive = isActive;
+    }
+
     public String getName() {
         return name;
     }
@@ -61,7 +72,8 @@ public class Demo {
 
     @Override
     public String toString() {
-        return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + "]";
+        return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + ", isActive=" + isActive
+                + "]";
     }
 
 }
