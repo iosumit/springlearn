@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class ConfigTest {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
-        Student student = context.getBean("getStudent", Student.class);
+        Student student = context.getBean("stuObj", Student.class);
         System.out.println(student);
         student.study();
     }
